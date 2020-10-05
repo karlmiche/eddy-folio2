@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>eddy's professional portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="node_modules/paper/dist/paper-full.min.js"
+    ></script>
+
+    <!-- script tag for random shapes -->
+    <script type="text/paperscript" canvas="myCanvas">
+
+      function random(min, max) {
+          return Math.floor(Math.random() * (max - min + 1) + min);
+          }
+
+        var center = new Point(50, 50);
+        var points = 5;
+        var radius1 = 25;
+        var radius2 = 40;
+        var star = new Path.Star(center, points, radius1, radius2);
+        star.fillColor = 'white';
+        star.strokeWidth = 3;
+        star.strokeColor =  "rgb(" + random(0, 255) + "," + random(0, 255) + "," + random(0, 255) + ")";
+    </script>
   </head>
   <body>
     <!-- navigation -->
@@ -18,10 +39,7 @@
     </div>
 
     <!-- splash page -->
-    <div class="splash-container">
-      <h1>eddy</h1>
-      <img src="http://placekitten.com/g/300/300/" />
-    </div>
+    <canvas class="splash-container" id="myCanvas"> </canvas>
 
     <!-- learning library carousel -->
     <div class="learning-lib">

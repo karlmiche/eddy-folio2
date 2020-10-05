@@ -1,43 +1,63 @@
-.nav-container {
-  border: 1px solid black;
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;1,200;1,300&family=Roboto&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
+  background-color: rgb(233, 195, 29);
+  height: 3vw;
+  padding-top: 2%;
+  margin: 0;
   justify-content: space-evenly;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+canvas {
+  background-color: white;
 }
 
 .splash-container {
-  border: 1px solid black;
   height: 50vw;
   display: grid;
   place-items: center;
 }
 
 .learning-lib-container {
-  border: 1px solid black;
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   height: 25vw;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .about-container {
-  border: 1px solid black;
   height: 50vw;
+  padding: 10px;
 }
 
 .chapbook-container {
-  border: 1px solid black;
+  background-color: teal;
   height: 25vw;
+  padding: 10px;
 }
 
 .footer-container {
-  border: 1px solid black;
   height: 15vw;
 }
 
 .lib-card {
   border: 1px solid black;
-  height: 90%;
+  width: 100px;
+  height: 100px;
 }
