@@ -2,26 +2,42 @@
   border: 1px solid black;
 }
 
-.header-container {
-  border: 1px solid black;
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .splash-container {
   border: 1px solid black;
+  height: 50vw;
+  display: grid;
+  place-items: center;
 }
 
 .learning-lib-container {
   border: 1px solid black;
+  display: flex;
+  justify-content: space-evenly;
+  height: 25vw;
 }
 
 .about-container {
   border: 1px solid black;
+  height: 50vw;
 }
 
 .chapbook-container {
   border: 1px solid black;
+  height: 25vw;
 }
 
 .footer-container {
   border: 1px solid black;
+  height: 15vw;
+}
+
+.lib-card {
+  border: 1px solid black;
+  height: 90%;
 }
