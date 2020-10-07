@@ -10,14 +10,15 @@
       src="node_modules/paper/dist/paper-full.min.js"
     ></script>
 
-    <!-- script tag for random shapes -->
+    <!-- script tag for random stars! -->
     <script type="text/paperscript" canvas="myCanvas">
 
       function random(min, max) {
           return Math.floor(Math.random() * (max - min + 1) + min);
           }
 
-        var center = new Point(50, 50);
+      function drawStar() {
+        var center = new Point(myCanvas.width, myCanvas.height) * Point.random();
         var points = 5;
         var radius1 = 25;
         var radius2 = 40;
@@ -25,6 +26,11 @@
         star.fillColor = 'white';
         star.strokeWidth = 3;
         star.strokeColor =  "rgb(" + random(0, 255) + "," + random(0, 255) + "," + random(0, 255) + ")";
+      }
+
+      for (i = 0; i < 75; i ++) {
+          drawStar();
+      }
     </script>
   </head>
   <body>
@@ -39,15 +45,59 @@
     </div>
 
     <!-- splash page -->
-    <canvas class="splash-container" id="myCanvas"> </canvas>
+    <div class="eddy-kid-container">
+      <div class="container1">
+        <img src="./assets/images/2127.jpg" class="eddy-kid" />
+        <div class="overlay">
+          <a class="text" href="https://twitter.com/thecowboypatch"
+            >eddy (they/them/theirs) is in search of the worst coffee west of
+            the Cascades</a
+          >
+        </div>
+      </div>
+      <canvas class="splash-container" id="myCanvas"></canvas>
+    </div>
 
-    <!-- learning library carousel -->
+    <!-- learning library section -->
     <div class="learning-lib">
       <h1>learnin' library</h1>
       <div class="learning-lib-container">
-        <div class="lib-card">card 1</div>
-        <div class="lib-card">card 2</div>
-        <div class="lib-card">card 3</div>
+        <div class="lib-card">
+          <button class="resourceBtn">
+            <a
+              href="https://www.dropbox.com/sh/fh4ojiyuq8glpf2/AADHcT7PMAbDZHWM3g_j0CH_a/AK%20Press%20eBooks?dl=0"
+              >AK Press eBooks</a
+            >
+          </button>
+          <p class="resourceTxt">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div class="lib-card">
+          <button class="resourceBtn">
+            <a
+              href="https://www.dropbox.com/sh/fh4ojiyuq8glpf2/AADG4x7j-WBS6CM6ROMtkHisa/Black%20Feminist%20Theory%20and%20Lit%20ENG%20311?dl=0"
+              >Black Feminist Theory</a
+            >
+          </button>
+          <p class="resourceTxt">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div class="lib-card">
+          <button class="resourceBtn">
+            <a
+              href="https://www.dropbox.com/sh/fh4ojiyuq8glpf2/AADekDaxGGNHM3vfqe4OhCkga/Children%27s%20Nonfiction%20by%20Black%20Women%20Writer%27s?dl=0"
+              >Children's Nonfiction by Black Women Writers</a
+            >
+          </button>
+          <p class="resourceTxt">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
         <div class="lib-card">card 4</div>
         <div class="lib-card">card 5</div>
         <div class="lib-card">card 6</div>
